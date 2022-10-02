@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
+
+/* Language: css */
+/* Path: style.css */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #0e0f10;
+  color: #a1d5cf;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+    display: grid;
+    place-content: center;
+    align-content: center;
+    min-height: 60vh;
+}
+
+.hidden {
+    opacity: 0;
+    transition: 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.visible {
+    opacity: 1;
+    transition: 1s;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hidden {
+        transition: none;
+    }
+    .visible {
+        transition: none;
+    }
+}
